@@ -17,7 +17,7 @@
 class AbstractClass
 {
 public:
-  virtual ~AbstractClass() {}
+  virtual ~AbstractClass() = default;
   
   void templateMethod()
   {
@@ -42,15 +42,15 @@ public:
 class ConcreteClass : public AbstractClass
 {
 public:
-  ~ConcreteClass() {}
+  ~ConcreteClass() override {}
   
-  void primitiveOperation1()
+  void primitiveOperation1() override
   {
     std::cout << "Primitive operation 1" << std::endl;
     // ...
   }
   
-  void primitiveOperation2()
+  void primitiveOperation2() override
   {
     std::cout << "Primitive operation 2" << std::endl;
     // ...

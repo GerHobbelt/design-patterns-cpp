@@ -42,6 +42,7 @@ public:
     {
       delete instance;
     }
+    instance = nullptr;
   }
   
   void tell()
